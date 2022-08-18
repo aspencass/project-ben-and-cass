@@ -1,9 +1,12 @@
-possible API links.. 
+Project Pitch 
 
-random user : 
-"API for generating random user data. Like Lorem Ipsum, but for people."
-    https://rapidapi.com/Alejandro99aru/api/random-user/
+Ben McShane & Cassidy Wagner 
 
-naturo database :
-"The API will list out all the Naruto Clan Members and their details. This data was gathered from the Anime only (Not from Manga)"
-    https://rapidapi.com/apremapk99-1s1aGoKCTVx/api/naruto-database/details
+Project Name : Fantasy Character Generator 
+
+One Sentence App Description : This app randomly generates fantasy characters, and allows you to favorite characters of your choice, saving them to a nav bar at the top. 
+
+User Stories :
+- As a user I can generate a never before seen character. 
+- As a user I can choose to favorite this character or generate a new one.
+- As a user I can return to characters I have favorited by selecting them in the nav bar. 
