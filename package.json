@@ -1,0 +1,23 @@
+{
+  "name": "project-ben-and-cass",
+  "description": "Project Pitch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aspencass/project-ben-and-cass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aspencass/project-ben-and-cass/issues"
+  },
+  "homepage": "https://github.com/aspencass/project-ben-and-cass#readme",
+  "dependencies": {
+    "fantasy-content-generator": "^4.9.1"
+  }
+}
