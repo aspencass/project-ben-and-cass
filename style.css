@@ -1,0 +1,81 @@
+body {
+    background-color: #497199;
+    background-image: url(./assets/background3.jpg);
+    background-blend-mode: multiply ;
+}
+#top {
+    background-image: url("./assets/logo.png"), url("https://i.pinimg.com/originals/b6/2f/48/b62f489487475a41bc35ed47e7ef6c30.jpg");
+    /* height: 275, 400px;
+    width: 250, 100%; */
+    background-repeat: no-repeat, no-repeat;
+    text-align: center;
+    line-height: 350px;
+    background-position: center, center;
+    background-size: 275px 300px, cover;
+    font-family: 'Luminari', fantasy;
+    font-size: 55px;
+    -webkit-text-stroke: .01px white;
+    border: 1px solid white; 
+    margin-left: 2.5%;
+    margin-right: 2.5%;   
+}
+
+#title-text {
+    height: 400px;
+    width: 100%;
+}
+
+hr {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#fav-characters {
+    background-color: #46494d;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#generate-box {
+    background-color: #497199;
+    float: left;
+    width: 67.5%;
+    height: 400px;
+    text-align: center;
+    margin-left: 2.4%;
+    border-left: 1px white solid;
+    border-top: 1px white solid;
+    border-bottom:1px white solid;
+}
+#blank {
+    font-size: 7px;
+}
+#dice-bar {
+    background-color: #46494d;
+    float:right;
+    width: 27.5%;
+    height: 400px;
+    text-align: center;
+    margin-right: 2.4%;
+    border-right: 1px white solid;
+    border-top: 1px white solid;
+    border-bottom:1px white solid;
+}
+#credit-box {
+    background-color: #46494d;
+    margin-left: 38%;
+    margin-right: 38%;
+    opacity: 80%;
+}
+#credits {
+    color: darkgray;
+    text-align: center;
+    line-height: 50px;
+}
+
+#logo {
+    opacity: 75%;
+    width: 250px;
+    height: 275px;
+}
+
