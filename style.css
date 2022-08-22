@@ -34,6 +34,7 @@ hr {
     background-color: #46494d;
     margin-left: 2.5%;
     margin-right: 2.5%;
+    border: 1px white solid;
 }
 
 #generate-box {
