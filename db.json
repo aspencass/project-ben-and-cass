@@ -659,10 +659,7 @@
             "{$tieflingFirst} {$humanLast}",
             "{$tieflingFirst}"
         ]
-    }
-}
-
-{
+    },
     "traits": [
         "My eyes are very piercing, and bright {blue/green}.",
         "My voice is {raspy/croaky/harsh} from years of {smoking/drinking}.",
@@ -763,22 +760,4 @@
         "I just want to run away from all of my responsibilities."
     ]
 }
-
-{
-    "dragonborn":       // 15-80
-    "dwarf":            // 50-350
-    "elf":              // 100-750
-    "gnome":            // 40 - 500
-    "halfElf":          // 20-180
-    "halfOrc":          // 14-75
-    "halfling":         // 20-200
-    "human":            // 18-80
-    "tiefling":         // 18-90
-}
-
-// name: first, last
-// race: "dragonborn" "dwarf" "elf" "gnome" "halfElf" "halfOrc" "halfling" "human" "tiefling"        
-// gender: male, female
-// "traits" 
-// "desires"
 
