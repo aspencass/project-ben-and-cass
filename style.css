@@ -2,6 +2,9 @@ body {
     background-color: #497199;
     background-image: url(./assets/background3.jpg);
     background-blend-mode: multiply ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
 }
 #top {
     background-image: url("./assets/logo.png"), url("https://i.pinimg.com/originals/b6/2f/48/b62f489487475a41bc35ed47e7ef6c30.jpg");
@@ -31,14 +34,15 @@ hr {
 }
 
 #fav-characters {
-    background-color: #46494d;
+    background-color: #34373b;
     margin-left: 2.5%;
     margin-right: 2.5%;
     border: 1px white solid;
+    opacity: .80;
 }
 
 #generate-box {
-    background-color: #497199;
+    background-color: #34506e;
     float: left;
     width: 67.5%;
     height: 400px;
@@ -47,12 +51,13 @@ hr {
     border-left: 1px white solid;
     border-top: 1px white solid;
     border-bottom:1px white solid;
+    opacity: .80;
 }
 #blank {
     font-size: 7px;
 }
 #dice-bar {
-    background-color: #46494d;
+    background-color: #34373b;
     float:right;
     width: 27.5%;
     height: 400px;
@@ -61,6 +66,7 @@ hr {
     border-right: 1px white solid;
     border-top: 1px white solid;
     border-bottom:1px white solid;
+    opacity: .80;
 }
 #credit-box {
     background-color: #46494d;
@@ -79,4 +85,5 @@ hr {
     width: 250px;
     height: 275px;
 }
+
 
