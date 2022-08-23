@@ -51,13 +51,39 @@ function randomNumberGen(min, max) {
 }
 
 
-function genderGenerator(currentCharacterGender) {
+function nameGenerator(currentCharacterGender) {
 	if (currentCharacterGender = 'female') {
-		return 'Female';
-	} else {
-		return 'Male';
+		let randomName = randomNumberGen(0, 5);
+		let currentCharacterName = characters.race.characterRace.gender.female[randomName]
+	} else if (currentCharacterGender = 'male') {
+		let randomName = randomNumberGen(0, 5);
+		let currentCharacterName = characters.race.characterRace.gender.male[randomName]
 	}
 }
+
+
+function raceGenerator() {
+	let randomRace = randomNumberGen(0, 8);
+	let currentCharacterRace = characters[randomRace];
+}
+
+function genderGenerator() {
+	let randomGender = randomNumberGen(0, 1);
+    let currentCharacterGender = characters.characterRace.gender[randomGender];
+}
+
+function traitsGenerator() {
+	let randomTraits = randomNumberGen(0, 12);
+    let currentCharacterTraits = characters.traits[randomTraits];
+}
+
+function desiresGenerator() {
+	let randomDesires = randomNumberGen(0, 19);
+    let currentCharacterDesires = characters.desires[randomDesires];
+}
+
+
+console.log(getDiceApi());
 
 
 
@@ -67,11 +93,11 @@ function genderGenerator(currentCharacterGender) {
 wishlist function 
 
 generator function 
-	- calls on random character race  [0-8]
-	- calls on random character gender [0-1]
-	- random name (gender male random number) [0-5]
-	- calls on random character traits [0-12]
-	- calls on random character desires [0-19]
+	[ x ] - calls on random character race  [0-8]
+	[ x ] - calls on random character gender [0-1]
+	[ x ] - random name (gender male random number) [0-5]
+	[ x ] - calls on random character traits [0-12]
+	[ x ] - calls on random character desires [0-19]
 	- takes the race and gender and generates an appropriate portrait 
 	- something that calls on dice and assigns it the 6 scores
 
