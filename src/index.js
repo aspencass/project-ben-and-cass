@@ -51,6 +51,15 @@ function randomNumberGen(min, max) {
 }
 
 
+function genderGenerator(currentCharacterGender) {
+	if (currentCharacterGender = 'female') {
+		return 'Female';
+	} else {
+		return 'Male';
+	}
+}
+
+
 
 
 /*
@@ -60,10 +69,9 @@ wishlist function
 generator function 
 	- calls on random character race  [0-8]
 	- calls on random character gender [0-1]
-	- random name and last name [0-5]
-	- calls on random character trait [0-12]
-	- calls on random character desire [0-19]
-	- takes the race and generates an approproate number 
+	- random name (gender male random number) [0-5]
+	- calls on random character traits [0-12]
+	- calls on random character desires [0-19]
 	- takes the race and gender and generates an appropriate portrait 
 	- something that calls on dice and assigns it the 6 scores
 

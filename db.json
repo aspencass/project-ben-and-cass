@@ -1,223 +1,186 @@
 {
     "characters": {
-        "dragonborn": {
-            "male": [
-                "Arjhan",
-                "Balasar",
-                "Bharash",
-                "Donaar",
-                "Ghesh",
-                "Heskan"
-            ],
-            "female": [
-                "Akra",
-                "Biri",
-                "Daar",
-                "Farideh",
-                "Harann",
-                "Havilar"
-            ],
-            "last": [
-                "Clethtinthiallor",
-                "Daardendrian",
-                "Delmirev",
-                "Drachedandion",
-                "Fenkenkabradon",
-                "Kepeshkmolik"
-            ],
-            "templates": ["{$first} {$last}"]
-        },
-        "dwarf": {
-            "male": [
-                "Adrik",
-                "Alberich",
-                "Baern",
-                "Barendd",
-                "Brottor",
-                "Bruenor"
-            ],
-            "female": [
-                "Amber",
-                "Artin",
-                "Audhild",
-                "Bardryn",
-                "Dagnal",
-                "Diesa"
-            ],
-            "last": [
-                "Balderk",
-                "Battlehammer",
-                "Brawnanvil",
-                "Dankil",
-                "Fireforge",
-                "Frostbeard"
-            ],
-            "templates": ["{$first} {$last}"]
-        },
-        "elf": {
-            "male": [
-                "Adran",
-                "Aelar",
-                "Aramil",
-                "Arannis",
-                "Aust",
-                "Beiro"
-            ],
-            "female": [
-                "Adrie",
-                "Althaea",
-                "Anastrianna",
-                "Andraste",
-                "Antinua",
-                "Bethrynna"
-            ],
-            "last": [
-                "Amakiir",
-                "Amastacia",
-                "Galanodel",
-                "Holimion",
-                "Ilphelkiir",
-                "Liadon"
-            ],
-            "templates": ["{$first} {$last}"]
-        },
-        "gnome": {
-            "male": [
-                "Alston",
-                "Alvyn",
-                "Boddynock",
-                "Brocc",
-                "Burgell",
-                "Dimble"
-            ],
-            "female": [
-                "Bimpnottin",
-                "Breena",
-                "Caramip",
-                "Carlin",
-                "Donella",
-                "Duvamil"
-            ],
-            "last": [
-                "Beren",
-                "Daergel",
-                "Folkor",
-                "Garrick",
-                "Nackle",
-                "Nikkle"
-            ],
-            "templates": ["{$first} {$last}"]
-        },
-        "halfElf": {
-            "templates": [
-                "{$humanFirst} {$humanLast}",
-                "{$elfFirst} {$elfLast}",
-                "{$humanFirst} {$elfLast}",
-                "{$elfFirst} {$humanLast}"
-            ]
-        },
-        "halfOrc": {
-            "male": [
-                "Dench",
-                "Feng",
-                "Gell",
-                "Henk",
-                "Holg",
-                "Imsh"
-            ],
-            "female": [
-                "Baggi",
-                "Emen",
-                "Engong",
-                "Kansif",
-                "Myev",
-                "Neega"
-            ],
-            "templates": [
-                "{$humanFirst} {$humanLast}",
-                "{$humanFirst}",
-                "{$orcFirst} {$humanLast}",
-                "{$orcFirst}"
-            ]
-        },
-        "halfling": {
-            "male": [
-                "Alton",
-                "Ander",
-                "Cade",
-                "Corrin",
-                "Eldon",
-                "Errich"
-            ],
-            "female": [
-                "Andry",
-                "Bree",
-                "Callie",
-                "Cora",
-                "Euphemia",
-                "Jillian"
-            ],
-            "last": [
-                "Brushgather",
-                "Goodbarrel",
-                "Greenbottle",
-                "High-hill",
-                "Hilltopple",
-                "Leagallow"
-            ],
-            "templates": ["{$first} {$last}"]
-        },
-        "human": {
-            "male": [
-                "Aseir",
-                "Bardeid",
-                "Haseid",
-                "Khemed",
-                "Mehmen",
-                "Sudeiman"
-            ],
-            "female": [
-                "Atala",
-                "Ceidil",
-                "Hama",
-                "Jasmal",
-                "Meilil",
-                "Seipora"
-            ],
-            "last": [
-                "Basha",
-                "Dumein",
-                "Jassan",
-                "Khalid",
-                "Mostana",
-                "Pashar"
-            ],
-            "templates": ["{$first} {$last}"]
-        },
-        "tiefling": {
-            "male": [
-                "Akmenos",
-                "Amnon",
-                "Barakas",
-                "Damakos",
-                "Ekemon",
-                "Lados"
-            ],
-            "female": [
-                "Aranxus",
-                "Zhermos",
-                "Amrius",
-                "Valros",
-                "Zerdos",
-                "Casira"
-            ],
-            "templates": [
-                "{$humanFirst} {$humanLast}",
-                "{$humanFirst}",
-                "{$tieflingFirst} {$humanLast}",
-                "{$tieflingFirst}"
-            ]
-        },
+        "race": {
+            "dragonborn": {
+                "gender": {
+                    "male": [
+                            "Arjhan",
+                            "Balasar",
+                            "Bharash",
+                            "Donaar",
+                            "Ghesh",
+                            "Heskan"
+                    ],
+                    "female": [
+                            "Akra",
+                            "Biri",
+                            "Daar",
+                            "Farideh",
+                            "Harann",
+                            "Havilar"
+                    ]
+                }
+            },
+            "dwarf": {
+                "gender": {
+                    "male": [
+                        "Adrik",
+                        "Alberich",
+                        "Baern",
+                        "Barendd",
+                        "Brottor",
+                        "Bruenor"
+                    ],
+                    "female": [
+                        "Amber",
+                        "Artin",
+                        "Audhild",
+                        "Bardryn",
+                        "Dagnal",
+                        "Diesa"
+                    ]
+                }
+            },
+            "elf": {
+                "gender": {
+                    "male": [
+                        "Adran",
+                        "Aelar",
+                        "Aramil",
+                        "Arannis",
+                        "Aust",
+                        "Beiro"
+                    ],
+                    "female": [
+                        "Adrie",
+                        "Althaea",
+                        "Anastrianna",
+                        "Andraste",
+                        "Antinua",
+                        "Bethrynna"
+                    ]
+                }
+            },
+            "gnome": {
+                "gender": {
+                    "male": [
+                        "Alston",
+                        "Alvyn",
+                        "Boddynock",
+                        "Brocc",
+                        "Burgell",
+                        "Dimble"
+                    ],
+                    "female": [
+                        "Bimpnottin",
+                        "Breena",
+                        "Caramip",
+                        "Carlin",
+                        "Donella",
+                        "Duvamil"
+                    ]
+                }
+            },
+            "halfElf": {
+                "gender": {
+                    "male": [
+                        "Aseir",
+                        "Bardeid",
+                        "Haseid",
+                        "Khemed",
+                        "Mehmen",
+                        "Sudeiman"
+                    ],
+                    "female": [
+                        "Atala",
+                        "Ceidil",
+                        "Hama",
+                        "Jasmal",
+                        "Meilil",
+                        "Seipora"
+                    ]
+                }
+            },
+            "halfOrc": {
+                "gender": {
+                    "male": [
+                        "Dench",
+                        "Feng",
+                        "Gell",
+                        "Henk",
+                        "Holg",
+                        "Imsh"
+                    ],
+                    "female": [
+                        "Baggi",
+                        "Emen",
+                        "Engong",
+                        "Kansif",
+                        "Myev",
+                        "Neega"
+                    ]
+                }
+            },
+            "halfling": {
+                "gender": {
+                    "male": [
+                        "Alton",
+                        "Ander",
+                        "Cade",
+                        "Corrin",
+                        "Eldon",
+                        "Errich"
+                    ],
+                    "female": [
+                        "Andry",
+                        "Bree",
+                        "Callie",
+                        "Cora",
+                        "Euphemia",
+                        "Jillian"
+                    ]
+                }
+            },
+            "human": {
+                "gender": {
+                    "male": [
+                        "Aseir",
+                        "Bardeid",
+                        "Haseid",
+                        "Khemed",
+                        "Mehmen",
+                        "Sudeiman"
+                    ],
+                    "female": [
+                        "Atala",
+                        "Ceidil",
+                        "Hama",
+                        "Jasmal",
+                        "Meilil",
+                        "Seipora"
+                    ]
+                }   
+            },
+            "tiefling": {
+                "gender": {
+                    "male": [
+                        "Akmenos",
+                        "Amnon",
+                        "Barakas",
+                        "Damakos",
+                        "Ekemon",
+                        "Lados"
+                    ],
+                    "female": [
+                        "Aranxus",
+                        "Zhermos",
+                        "Amrius",
+                        "Valros",
+                        "Zerdos",
+                        "Casira"
+                    ]
+                }
+            },
         "traits": [
             "My hair is an unusual colour for my face.",
             "My eyes are an unusual colour for my face.",
@@ -252,9 +215,8 @@
             "I want to find true love.",
             "I want to prove to my family that I can be strong and independent.",
             "I want to see my sibling succeed.",
-            "I want to seek mentor ship to control my latent Sorcerous powers.",
+            "I want to seek mentorship to control my latent Sorcerous powers.",
             "I just want to run away from all of my responsibilities."
-        ]
+        ]}
     }
 }
-
