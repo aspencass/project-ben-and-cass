@@ -27,12 +27,25 @@ fetch('http://localhost:3000/characters')
 
 // DOM Selectors
 
- 
+const navBar = document.querySelector('#fav-characters');
+const name = document.querySelector('#npc-name');
+const race = document.querySelector('#npc-race');
+const gender = document.querySelector('#npc-gender');
+const traits = document.querySelector('#npc-traits');
+const desires = document.querySelector('#npc-desires');
+
 
 
 // Render Functions 
 
-
+function showCharacter(data) {
+	currentCharacter = data;
+	name.textContent = data.name;
+	race.textContent = data.race;
+	gender.textContent = data.gender;
+	traits.textContent = data.traits;
+	desires.textContent = data.desires;
+}
 
 
 // Event Handlers 
@@ -43,6 +56,7 @@ fetch('http://localhost:3000/characters')
 // Initializers 
 
 getDiceApi();
+
 
 
 
