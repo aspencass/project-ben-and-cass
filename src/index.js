@@ -1,19 +1,7 @@
 // Globals
 
-const baseUrl = 'http://localhost:3000/';
-const baseUrlEnd = '';
-const dragonbornUrl = '/dragonborn';
-const dwarfUrl = 'http://localhost:3000/dwarf';
-const elfUrl = 'http://localhost:3000/elf';
-const gnomeUrl = 'http://localhost:3000/gnome';
-const halfElfUrl = 'http://localhost:3000/halfElf';
-const halfOrcUrl = 'http://localhost:3000/halfOrc';
-const halflingUrl = 'http://localhost:3000/halfling';
-const humanUrl = 'http://localhost:3000/human';
-const tieflingUrl = 'http://localhost:3000/tiefling';
-const traitsUrl = 'http://localhost:3000/traits';
-const desiresUrl = 'http://localhost:3000/desires';
-
+let currentCharacterRace;
+let currentCharacterAge;
 
 
 
@@ -126,3 +114,49 @@ gender: male, female
 
 
 */
+
+
+
+
+// To do
+// wishlist function
+// generator function
+//     - calls on random character race  [0-8]
+//     - calls on random character gender [0-1]
+//     - random name and last name [0-5]
+//     - calls on random character trait [0-12]
+//     - calls on random character desire [0-19]
+//     - takes the race and generates an approproate number
+//     - takes the race and gender and generates an appropriate portrait
+//     - something that calls on dice and assigns it the 6 scores
+// function favoriter
+// function unfavorite
+
+//Age Generator
+
+function raceAgeGenerator(currentCharacterRace) {
+	if (currentCharacterRace = 'dragonborn') {
+		let currentCharacterAge = randomNumberGen(15, 80);
+		console.log(currentCharacterAge);
+	} else if (currentCharacterRace = 'dwarf') {
+		let currentCharacterAge = randomNumberGen(50, 350);
+	} else if (currentCharacterRace = 'elf') {
+		let currentCharacterAge = randomNumberGen(100, 750);
+	} else if (currentCharacterRace = 'gnome') {
+		let currentCharacterAge = randomNumberGen(40, 500);
+	} else if (currentCharacterRace = 'halfElf') {
+		let currentCharacterAge = randomNumberGen(20, 180);
+	} else if (currentCharacterRace = 'halfOrc') {
+		let currentCharacterAge = randomNumberGen(14, 75);
+	} else if (currentCharacterRace = 'halfling') {
+		let currentCharacterAge = randomNumberGen(20, 200);
+	} else if (currentCharacterRace = 'human') {
+		let currentCharacterAge = randomNumberGen(18, 80)
+	} else if (currentCharacterRace = 'tiefling') {
+		let currentCharacterAge = randomNumberGen(18, 90);
+	}
+}
+
+function randomNumberGen(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min)
+}

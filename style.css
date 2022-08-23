@@ -67,6 +67,7 @@ hr {
     border-top: 1px white solid;
     border-bottom:1px white solid;
     opacity: .80;
+    font-family: 'Luminari', fantasy;
  }
  #column-one {
     width: 45%;
@@ -123,4 +124,14 @@ hr {
     height: 275px;
 }
 
+#generate-btn {
+    color: white;
+    background-color: #34373b;
+    font-family: 'Luminari', fantasy;
+}
 
+#fav-btn {
+    color: white;
+    background-color: #34373b;
+    font-family: 'Luminari', fantasy;
+}
