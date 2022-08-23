@@ -36,13 +36,11 @@ function getDiceApi() {
 
 function getDndData(url){
 	return fetch(url + baseUrlEnd) 
-		.then(function (response) {
-			return response.json();
-			})
-		.then(function (allData) {
-			return allData;
+		.then( res => res.json())
+		.then( data => {
+			return data;
 		})
-};
+}
 
 
 /*
