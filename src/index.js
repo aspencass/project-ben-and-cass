@@ -27,25 +27,10 @@ fetch('http://localhost:3000/characters')
 
 // DOM Selectors
 
-const navBar = document.querySelector('#fav-characters');
-const name = document.querySelector('#npc-name');
-const race = document.querySelector('#npc-race');
-const gender = document.querySelector('#npc-gender');
-const traits = document.querySelector('#npc-traits');
-const desires = document.querySelector('#npc-desires');
-
 
 
 // Render Functions 
 
-function showCharacter(data) {
-	currentCharacter = data;
-	name.textContent = data.name;
-	race.textContent = data.race;
-	gender.textContent = data.gender;
-	traits.textContent = data.traits;
-	desires.textContent = data.desires;
-}
 
 
 // Event Handlers 
@@ -56,6 +41,10 @@ function showCharacter(data) {
 // Initializers 
 
 getDiceApi();
+renderCharacter(dragonborn);
+
+
+
 
 
 
@@ -70,8 +59,20 @@ getDiceApi();
 
 wishlist function 
 
-age genereation
-portrait assignment 
+generator function 
+	- calls on random character race 
+	- calls on random character gender
+	- random name and last name 
+	- calls on random character trait 
+	- calls on random character desire 
+	- takes the race and generates an approproate number 
+	- takes the race and gender and generates an appropriate portrait 
+	- something that calls on dice and assigns it the 6 scores
+
+
+function favoriter 
+
+function unfavorite 
 
 
 
@@ -87,14 +88,6 @@ portrait assignment
     "human":            // 18-80
     "tiefling":         // 18-90
 }
-
-name: first, last
-race: "dragonborn" "dwarf" "elf" "gnome" "halfElf" "halfOrc" "halfling" "human" "tiefling"        
-gender: male, female
-"traits" 
-"desires"
-
-
 
 
 
