@@ -94,6 +94,10 @@ hr {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    -webkit-filter: drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white);
+    filter: drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white);
  }
  .top {
     position: absolute;
