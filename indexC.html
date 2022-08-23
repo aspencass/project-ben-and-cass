@@ -32,30 +32,40 @@
             <button id="fav-btn">Favorite!</button>
         </div>
         
-        <div id="dice-bar">
-            <div id="Str">
-                <!-- <img src="" style="width: 100px; height: 125px;"/> -->
-                <p id="Str-Scr"></p>
+        <div id="dice-bar" class="row">
+            <div class="column" id="column-one">
+                <div id="Str" class="container" style="width: 65px; height: 85px; margin-top: 5px; margin-bottom: 5px;">
+                    <img id="Str-Die" src="./assets/d4.png" style="width: 100%;" />
+                    <div class="top" style="top:50px">STR</div>
+                    <div class="bottom" style="top:35px">10</div>
+                </div>
+                <div id="Dex" class="container">
+                    <img id="Dex-Die" src="./assets/d6.png" style="width: 85px; height: 110px; margin-top: 7.5%;"/>
+                    <p class="top">DEX</p>
+                    <p class="bottom">10</p>
+                </div>
+                <div id="Con" class="container">
+                    <img id="Con-Die" src="./assets/d8.png" style="width: 70px; height: 145px; margin-bottom: 5%;"/>
+                    <p class="top" style="top:65px">CON</p>
+                    <p class="bottom" style="top:35px">10</p>
+                </div>
             </div>
-            <div id="Dex">
-                <img src=""/>
-                <p id="Dex-Scr"></p>
-            </div>
-            <div id="Con">
-                <img src=""/>
-                <p id="Con-Scr"></p>
-            </div>
-            <div id="Int">
-                <img src=""/>
-                <p id="Int-Scr"></p>
-            </div>
-            <div id="Wis">
-                <img src=""/>
-                <p id="Wis-Scr"></p>
-            </div>
-            <div id="Cha">
-                <img src=""/>
-                <p id="Cha-Scr"></p>
+            <div class="column" id="column-two">
+                <div id="Int" class="container">
+                    <img id="Int-Die" src="./assets/d10.png" style="width: 100px; height: 100px;"/>
+                    <p class="top">INT</p>
+                    <p class="bottom">10</p>
+                </div>
+                <div id="Wis" class="container">
+                    <img id="Wis-Die" src="./assets/d12.png" style="width: 90px; height: 110px; margin-top: 5%;"/>
+                    <p class="top">WIS</p>
+                    <p class="bottom">10</p>
+                </div>
+                <div id="Cha" class="container">
+                    <img id="Cha-Die" src="./assets/d20.png" style="width: 105px; height: 105px; transform: rotate(29deg); margin-top: 15%;"/>
+                    <p class="top" style="top:65px">CHA</p>
+                    <p class="bottom" style="top:35px">10</p>
+                </div>
             </div>
         </div>
         <p id="blank">&nbsp</p>

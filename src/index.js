@@ -1,8 +1,3 @@
-// Globals
-
-
-// Fetches
-
 function getDiceApi() {
 	const options = {
 		method: 'GET',
@@ -26,27 +21,34 @@ fetch('http://localhost:3000/characters')
 
 
 
+// age generating function
 
+function raceAgeGenerator(currentCharacterRace) {
+	if (currentCharacterRace = 'dragonborn') {
+		let currentCharacterAge = randomNumberGen(15, 80);
+		console.log(currentCharacterAge);
+	} else if (currentCharacterRace = 'dwarf') {
+		let currentCharacterAge = randomNumberGen(50, 350);
+	} else if (currentCharacterRace = 'elf') {
+		let currentCharacterAge = randomNumberGen(100, 750);
+	} else if (currentCharacterRace = 'gnome') {
+		let currentCharacterAge = randomNumberGen(40, 500);
+	} else if (currentCharacterRace = 'halfElf') {
+		let currentCharacterAge = randomNumberGen(20, 180);
+	} else if (currentCharacterRace = 'halfOrc') {
+		let currentCharacterAge = randomNumberGen(14, 75);
+	} else if (currentCharacterRace = 'halfling') {
+		let currentCharacterAge = randomNumberGen(20, 200);
+	} else if (currentCharacterRace = 'human') {
+		let currentCharacterAge = randomNumberGen(18, 80)
+	} else if (currentCharacterRace = 'tiefling') {
+		let currentCharacterAge = randomNumberGen(18, 90);
+	}
+}
 
-
-
-
-// DOM Selectors
-
-
-
-// Render Functions 
-
-
-
-// Event Handlers 
-
-
-
-
-// Initializers 
-
-
+function randomNumberGen(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 
 
@@ -70,23 +72,4 @@ function favoriter
 
 function unfavorite 
 
-
-
-
-{
-    "dragonborn":       // 15-80
-    "dwarf":            // 50-350
-    "elf":              // 100-750
-    "gnome":            // 40 - 500
-    "halfElf":          // 20-180
-    "halfOrc":          // 14-75
-    "halfling":         // 20-200
-    "human":            // 18-80
-    "tiefling":         // 18-90
-}
-
-
-
-
-
-*/
+*/ 
