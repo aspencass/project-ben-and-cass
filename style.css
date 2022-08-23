@@ -67,7 +67,44 @@ hr {
     border-top: 1px white solid;
     border-bottom:1px white solid;
     opacity: .80;
-}
+ }
+ #column-one {
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+ }
+
+ #column-two {
+    width: 45%;
+    float: right;
+    margin-right: 5%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+ }
+ .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .top {
+    position: absolute;
+    top: 45%;
+    margin-top: 5%;
+ } 
+ .bottom {
+    position: absolute;
+    bottom: 45%;
+    margin-bottom: 5%;
+ }
+
 #credit-box {
     background-color: #46494d;
     margin-left: 38%;
