@@ -40,16 +40,6 @@ fetch('http://localhost:3000/characters')
 
 // Initializers 
 
-getDiceApi();
-renderCharacter(dragonborn);
-
-
-
-
-
-
-
-
 
 
 
@@ -60,11 +50,11 @@ renderCharacter(dragonborn);
 wishlist function 
 
 generator function 
-	- calls on random character race 
-	- calls on random character gender
-	- random name and last name 
-	- calls on random character trait 
-	- calls on random character desire 
+	- calls on random character race  [0-8]
+	- calls on random character gender [0-1]
+	- random name and last name [0-5]
+	- calls on random character trait [0-12]
+	- calls on random character desire [0-19]
 	- takes the race and generates an approproate number 
 	- takes the race and gender and generates an appropriate portrait 
 	- something that calls on dice and assigns it the 6 scores
