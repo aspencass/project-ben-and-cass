@@ -17,4 +17,34 @@ fetch('https://dice-roll.p.rapidapi.com/roll/4/d/20', options)
 	.catch(err => console.error(err));
 
 
+/*
 
+wishlist function 
+
+age genereation
+portrait assignment 
+
+
+
+
+
+
+
+
+FCG.Names.generate();
+{
+  seed: <uuid>,
+  name: 'Sutha Chernin',
+  race: 'halfOrc',
+  gender: 'female',
+  formattedData: {
+    name: 'Sutha Chernin',
+    race: 'Half-Orc',
+    gender: 'Female'
+  }
+}
+
+
+
+
+*/
