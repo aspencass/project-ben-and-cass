@@ -1,21 +1,5 @@
 // Globals
 
-const baseUrl = 'http://localhost:3000/';
-const baseUrlEnd = '';
-const dragonbornUrl = '/dragonborn';
-const dwarfUrl = 'http://localhost:3000/dwarf';
-const elfUrl = 'http://localhost:3000/elf';
-const gnomeUrl = 'http://localhost:3000/gnome';
-const halfElfUrl = 'http://localhost:3000/halfElf';
-const halfOrcUrl = 'http://localhost:3000/halfOrc';
-const halflingUrl = 'http://localhost:3000/halfling';
-const humanUrl = 'http://localhost:3000/human';
-const tieflingUrl = 'http://localhost:3000/tiefling';
-const traitsUrl = 'http://localhost:3000/traits';
-const desiresUrl = 'http://localhost:3000/desires';
-
-
-
 
 // Fetches
 
@@ -34,33 +18,12 @@ function getDiceApi() {
 }
 
 
-function getDndData(url){
-	return fetch(url + baseUrlEnd) 
-		.then( res => res.json())
-		.then( data => {
-			return data;
-		})
-}
+
+fetch('http://localhost:3000/characters')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 
 
-/*
-
-var responseClone; // 1
-fetch('https://example.com/some/path/to/json')
-.then(function (response) {
-    responseClone = response.clone(); // 2
-    return response.json();
-})
-.then(function (data) {
-    // Do something with data
-}, function (rejectionReason) { // 3
-    console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
-    responseClone.text() // 5
-    .then(function (bodyText) {
-        console.log('Received the following instead of valid JSON:', bodyText); // 6
-    });
-});
-*/
 
 // DOM Selectors
 
@@ -80,7 +43,7 @@ fetch('https://example.com/some/path/to/json')
 // Initializers 
 
 getDiceApi();
-getDndData(baseUrl);
+
 
 
 
