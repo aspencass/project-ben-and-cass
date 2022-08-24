@@ -1,9 +1,9 @@
 {
-    "characters": {
-        "race": {
+    "characters": [{
+        "races": {
             "dragonborn": {
-                "gender": {
-                    "male": [
+                
+                    "male" : [
                             "Arjhan",
                             "Balasar",
                             "Bharash",
@@ -11,7 +11,7 @@
                             "Ghesh",
                             "Heskan"
                     ],
-                    "female": [
+                    "female" : [
                             "Akra",
                             "Biri",
                             "Daar",
@@ -19,10 +19,9 @@
                             "Harann",
                             "Havilar"
                     ]
-                }
+                 
             },
             "dwarf": {
-                "gender": {
                     "male": [
                         "Adrik",
                         "Alberich",
@@ -39,10 +38,8 @@
                         "Dagnal",
                         "Diesa"
                     ]
-                }
             },
             "elf": {
-                "gender": {
                     "male": [
                         "Adran",
                         "Aelar",
@@ -59,10 +56,8 @@
                         "Antinua",
                         "Bethrynna"
                     ]
-                }
             },
             "gnome": {
-                "gender": {
                     "male": [
                         "Alston",
                         "Alvyn",
@@ -79,10 +74,8 @@
                         "Donella",
                         "Duvamil"
                     ]
-                }
             },
             "halfElf": {
-                "gender": {
                     "male": [
                         "Aseir",
                         "Bardeid",
@@ -99,10 +92,8 @@
                         "Meilil",
                         "Seipora"
                     ]
-                }
             },
             "halfOrc": {
-                "gender": {
                     "male": [
                         "Dench",
                         "Feng",
@@ -119,10 +110,8 @@
                         "Myev",
                         "Neega"
                     ]
-                }
             },
             "halfling": {
-                "gender": {
                     "male": [
                         "Alton",
                         "Ander",
@@ -139,10 +128,8 @@
                         "Euphemia",
                         "Jillian"
                     ]
-                }
             },
             "human": {
-                "gender": {
                     "male": [
                         "Aseir",
                         "Bardeid",
@@ -158,11 +145,9 @@
                         "Jasmal",
                         "Meilil",
                         "Seipora"
-                    ]
-                }   
+                    ] 
             },
             "tiefling": {
-                "gender": {
                     "male": [
                         "Akmenos",
                         "Amnon",
@@ -179,9 +164,10 @@
                         "Zerdos",
                         "Casira"
                     ]
-                }
-            },
-        "traits": [
+            }
+    }
+    },
+        [
             "My hair is an unusual colour for my face.",
             "My eyes are an unusual colour for my face.",
             "I have lots of freckles.",
@@ -196,7 +182,7 @@
             "I have a very short temper.",
             "I am very bossy."
         ],
-        "desires": [
+        [
             "All I desire is a home to live in and a family to care for.",
             "All I want is enough money to pay off my debts.",
             "I want to prove myself, and escape the shadow of my sibling.",
@@ -217,6 +203,6 @@
             "I want to see my sibling succeed.",
             "I want to seek mentorship to control my latent Sorcerous powers.",
             "I just want to run away from all of my responsibilities."
-        ]}
-    }
+        ]
+    ]
 }

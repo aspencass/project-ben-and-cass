@@ -1,3 +1,19 @@
+let strScr;
+let dexScr;
+let conScr;
+let intScr;
+let wisScr;
+let chaScr;
+let currentCharacter;
+let currentCharacterRace;
+let currentCharacterAge;
+let currentCharacterGender;
+let currentCharacterName;
+let currentCharacterTrait;
+let currentCharacterDesire;
+
+
+
 function getDiceApi() {
 	const options = {
 		method: 'GET',
@@ -6,7 +22,7 @@ function getDiceApi() {
 			'X-RapidAPI-Host': 'dice-roll.p.rapidapi.com'
 		}
 	}
-	fetch('https://dice-roll.p.rapidapi.com/roll/4/d/20', options)
+	fetch('https://dice-roll.p.rapidapi.com/roll/6/d/20', options)
 		.then(response => response.json())
 		.then(response => console.log(response))
 		.catch(err => console.error(err));
@@ -15,71 +31,191 @@ function getDiceApi() {
 
 
 fetch('http://localhost:3000/characters')
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => data.json())
+  .then((data) => {
+	characterInfo = data;
+	// raceGenerator(characterInfo)
+	// generateCharacter(data);
+  });
 
+
+// Character Gen Function
+function generateCharacter() {
+	raceGenerator();
+	genderGenerator();
+	nameGenerator();
+	raceAgeGenerator();
+	traitGenerator();
+	desireGenerator();
+	// rollStats();
+	// assignPortrait();
+	console.log(currentCharacterRace);	
+	console.log(currentCharacterGender);
+	console.log(currentCharacterName);
+	console.log(currentCharacterAge);
+	console.log(currentCharacterTrait);
+	console.log(currentCharacterDesire);
+
+}
+
+
+
+// Dice Rolling Function
+
+function rollStats() {
+	const options = {
+		method: 'GET',
+		headers: {
+			'X-RapidAPI-Key': '7c36118751msh411ebf7605a21d9p15665djsne9a3ef934253',
+			'X-RapidAPI-Host': 'dice-roll.p.rapidapi.com'
+		}
+	}
+	fetch('https://dice-roll.p.rapidapi.com/roll/6/d/20', options)
+		.then(response => response.json())
+		.then(response => {
+			let strScr = document.querySelector('#Str-Scr');
+			let dexScr = document.querySelector('#Dex-Scr');
+			let conScr = document.querySelector('#Con-Scr');
+			let intScr = document.querySelector('#Int-Scr');
+			let winScr = document.querySelector('#Wis-Scr');
+			let chaScr = document.querySelector('#Cha-Scr');
+
+			strScr.textContent = response.rolls[0];
+			dexScr.textContent = response.rolls[1];
+			conScr.textContent = response.rolls[2];
+			intScr.textContent = response.rolls[3];
+			winScr.textContent = response.rolls[4];
+			chaScr.textContent = response.rolls[5];
+
+			document.querySelector
+		})
+		.catch(err => console.error(err));
+}
 
 
 
 // age generating function
 
-function raceAgeGenerator(currentCharacterRace) {
-	if (currentCharacterRace = 'dragonborn') {
-		let currentCharacterAge = randomNumberGen(15, 80);
-		console.log(currentCharacterAge);
-	} else if (currentCharacterRace = 'dwarf') {
-		let currentCharacterAge = randomNumberGen(50, 350);
-	} else if (currentCharacterRace = 'elf') {
-		let currentCharacterAge = randomNumberGen(100, 750);
-	} else if (currentCharacterRace = 'gnome') {
-		let currentCharacterAge = randomNumberGen(40, 500);
-	} else if (currentCharacterRace = 'halfElf') {
-		let currentCharacterAge = randomNumberGen(20, 180);
-	} else if (currentCharacterRace = 'halfOrc') {
-		let currentCharacterAge = randomNumberGen(14, 75);
-	} else if (currentCharacterRace = 'halfling') {
-		let currentCharacterAge = randomNumberGen(20, 200);
-	} else if (currentCharacterRace = 'human') {
-		let currentCharacterAge = randomNumberGen(18, 80)
-	} else if (currentCharacterRace = 'tiefling') {
-		let currentCharacterAge = randomNumberGen(18, 90);
+function raceAgeGenerator() {
+	let ageCheck = currentCharacterRace
+	if (ageCheck === 'dragonborn') {
+		currentCharacterAge = randomNumberGen(15, 80);
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'dwarf') {
+		currentCharacterAge = randomNumberGen(50, 350);
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'elf') {
+		currentCharacterAge = randomNumberGen(100, 750);
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'gnome') {
+		currentCharacterAge = randomNumberGen(40, 500);
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'halfElf') {
+		currentCharacterAge = randomNumberGen(20, 180);
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'halfOrc') {
+		currentCharacterAge = randomNumberGen(14, 75);
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'halfling') {
+		currentCharacterAge = randomNumberGen(20, 200);
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'human') {
+		currentCharacterAge = randomNumberGen(18, 80)
+		// console.log(currentCharacterAge);
+	} else if (ageCheck === 'tiefling') {
+		currentCharacterAge = randomNumberGen(18, 90);
+		// console.log(currentCharacterAge);
+	} else {
+		console.log('You Fool!');
 	}
 }
+
+// Random No. Gen
 
 function randomNumberGen(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+// Name Gen
 
-function nameGenerator(currentCharacterGender) {
-	if (currentCharacterGender = 'female') {
-		let randomName = randomNumberGen(0, 5);
-		let currentCharacterName = characters.race.characterRace.gender.female[randomName]
-	} else if (currentCharacterGender = 'male') {
-		let randomName = randomNumberGen(0, 5);
-		let currentCharacterName = characters.race.characterRace.gender.male[randomName]
+function nameGenerator() {
+	if (currentCharacterGender === 'female') {
+		randomName = randomNumberGen(0, 5);
+		nameGenRace = currentCharacterRace; 
+		currentCharacterName = characterInfo[0].races[`${currentCharacterRace}`].female[randomName];
+		// console.log(currentCharacterName);
+	} else if (currentCharacterGender === 'male') {
+		randomName = randomNumberGen(0, 5);
+		nameGenRace = currentCharacterRace; 
+		currentCharacterName = characterInfo[0].races[`${currentCharacterRace}`].male[randomName];
+		// console.log(currentCharacterName);
+	} else {
+		console.log('You Fool!');
+	}
+}
+
+// Race Gen
+
+function raceGenerator() {
+	let randomRace = randomNumberGen(0, 8);
+	if (randomRace === 0) {
+		currentCharacterRace = 'dragonborn';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 1) {
+		currentCharacterRace = 'dwarf';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 2) {
+		currentCharacterRace = 'elf';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 3) {
+		currentCharacterRace = 'gnome';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 4) {
+		currentCharacterRace = 'halfElf';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 5) {
+		currentCharacterRace = 'halfOrc';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 6) {
+		currentCharacterRace = 'halfling';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 7) {
+		currentCharacterRace = 'human';
+		// console.log(currentCharacterRace);
+	} else if (randomRace === 8) {
+		currentCharacterRace = 'tiefling';
+		// console.log(currentCharacterRace);
 	}
 }
 
 
-function raceGenerator() {
-	let randomRace = randomNumberGen(0, 8);
-	let currentCharacterRace = characters[randomRace];
-}
+// Gender Gen
 
 function genderGenerator() {
 	let randomGender = randomNumberGen(0, 1);
-    let currentCharacterGender = characters.characterRace.gender[randomGender];
+    if (randomGender === 0) {
+		currentCharacterGender = 'male';
+		// console.log(currentCharacterGender);
+	} else {
+		currentCharacterGender = 'female';
+		// console.log(currentCharacterGender);
+	}
 }
 
-function traitsGenerator() {
-	let randomTraits = randomNumberGen(0, 12);
-    let currentCharacterTraits = characters.traits[randomTraits];
+// Trait Gen
+
+function traitGenerator() {
+	randomTrait = randomNumberGen(0, 12);
+    currentCharacterTrait = characterInfo[1][randomTrait];
+	// console.log(currentCharacterTraits);
 }
 
-function desiresGenerator() {
-	let randomDesires = randomNumberGen(0, 19);
-    let currentCharacterDesires = characters.desires[randomDesires];
+// Desire Gen
+
+function desireGenerator() {
+	randomDesire = randomNumberGen(0, 19);
+    currentCharacterDesire = characterInfo[2][randomDesire];
+	// console.log(currentCharacterDesires);
 }
 
 
