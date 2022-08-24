@@ -11,22 +11,10 @@ let currentCharacterGender;
 let currentCharacterName;
 let currentCharacterTrait;
 let currentCharacterDesire;
-
-
-
-function getDiceApi() {
-	const options = {
-		method: 'GET',
-		headers: {
-			'X-RapidAPI-Key': '7c36118751msh411ebf7605a21d9p15665djsne9a3ef934253',
-			'X-RapidAPI-Host': 'dice-roll.p.rapidapi.com'
-		}
-	}
-	fetch('https://dice-roll.p.rapidapi.com/roll/6/d/20', options)
-		.then(response => response.json())
-		.then(response => console.log(response))
-		.catch(err => console.error(err));
-}
+let currentCharacterRolls;
+let currentCharacterPortraitURL;
+let currentCharacterPortrait;
+let genButton;
 
 
 
@@ -34,9 +22,17 @@ fetch('http://localhost:3000/characters')
   .then((data) => data.json())
   .then((data) => {
 	characterInfo = data;
-	// raceGenerator(characterInfo)
-	// generateCharacter(data);
+	generateCharacter();
   });
+
+// Character Gen Event Listener
+function genBtn() {
+	let genButton = document.querySelector('#generate-btn');
+	genButton.addEventListener('click', (e) => {
+		e.preventDefault();
+		genButton.onclick = generateCharacter(e);
+	})
+}
 
 
 // Character Gen Function
@@ -47,14 +43,60 @@ function generateCharacter() {
 	raceAgeGenerator();
 	traitGenerator();
 	desireGenerator();
-	// rollStats();
-	// assignPortrait();
+	rollStats();
+	assignPortrait();
 	console.log(currentCharacterRace);	
 	console.log(currentCharacterGender);
 	console.log(currentCharacterName);
 	console.log(currentCharacterAge);
 	console.log(currentCharacterTrait);
 	console.log(currentCharacterDesire);
+	showCharacters();
+
+}
+
+// Show Character Function
+function showCharacters() {
+    const name = document.querySelector('#npc-name');
+    const race = document.querySelector('#npc-race');
+    const gender = document.querySelector('#npc-gender');
+    const trait = document.querySelector('#npc-trait');
+    const desire = document.querySelector('#npc-desire');
+    const age = document.querySelector('#npc-age');
+
+    name.textContent = currentCharacterName;
+    // race.textContent = currentCharacterRace;
+    trait.textContent = currentCharacterTrait;
+    desire.textContent = currentCharacterDesire;
+    age.textContent = currentCharacterAge;
+	if (currentCharacterGender === 'male') {
+		gender.textContent = 'Male';
+	} else if (currentCharacterGender === 'female') {
+		gender.textContent = 'Female';
+	} else {
+		console.log('You Fool!');
+	};
+	if (currentCharacterRace === 'halfElf') {
+		race.textContent = 'Half-Elf';
+	} else if (currentCharacterRace === 'halfOrc') {
+		race.textContent = 'Half-Orc';
+	} else {
+		race.textContent = capitalizeFirstLetter(currentCharacterRace);
+	};
+}
+
+// Capitalize First Letter Function
+function capitalizeFirstLetter(str) {
+	const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+    return capitalized;
+}
+
+// Portrait assignment function
+function assignPortrait() {
+	randomPortraitNo = randomNumberGen(1, 6);
+	currentCharacterPortraitURL = `./assets/portraits/${currentCharacterRace}/${currentCharacterGender}/0${randomPortraitNo}.jpg`
+	let currentCharacterPortrait = document.querySelector('#npc-portrait');
+	currentCharacterPortrait.src = currentCharacterPortraitURL;
 
 }
 
@@ -70,7 +112,7 @@ function rollStats() {
 			'X-RapidAPI-Host': 'dice-roll.p.rapidapi.com'
 		}
 	}
-	fetch('https://dice-roll.p.rapidapi.com/roll/6/d/20', options)
+	fetch('https://dice-roll.p.rapidapi.com/roll/6/d/10', options)
 		.then(response => response.json())
 		.then(response => {
 			let strScr = document.querySelector('#Str-Scr');
@@ -80,14 +122,18 @@ function rollStats() {
 			let winScr = document.querySelector('#Wis-Scr');
 			let chaScr = document.querySelector('#Cha-Scr');
 
-			strScr.textContent = response.rolls[0];
-			dexScr.textContent = response.rolls[1];
-			conScr.textContent = response.rolls[2];
-			intScr.textContent = response.rolls[3];
-			winScr.textContent = response.rolls[4];
-			chaScr.textContent = response.rolls[5];
+			currentCharacterRolls = [response.rolls[0] + 8, response.rolls[1] + 8, response.rolls[2] + 8, response.rolls[3] + 8, response.rolls[4] + 8, response.rolls[5] + 8]
 
-			document.querySelector
+			strScr.textContent = currentCharacterRolls[0];
+			dexScr.textContent = currentCharacterRolls[1];
+			conScr.textContent = currentCharacterRolls[2];
+			intScr.textContent = currentCharacterRolls[3];
+			winScr.textContent = currentCharacterRolls[4];
+			chaScr.textContent = currentCharacterRolls[5];
+
+			console.log(currentCharacterRolls);
+
+			
 		})
 		.catch(err => console.error(err));
 }
@@ -219,7 +265,7 @@ function desireGenerator() {
 }
 
 
-console.log(getDiceApi());
+
 
 
 
