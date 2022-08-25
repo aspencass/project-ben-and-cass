@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     backdrop-filter: blur(3px);
 }
+
 #top {
     background-image: url("./assets/logo.png"), url("https://i.pinimg.com/originals/b6/2f/48/b62f489487475a41bc35ed47e7ef6c30.jpg");
     /* height: 275, 400px;
@@ -53,9 +54,11 @@ hr {
     border-bottom:1px white solid;
     opacity: .80;
 }
+
 #blank {
     font-size: 7px;
 }
+
 #dice-bar {
     background-color: #34373b;
     float:right;
@@ -69,6 +72,7 @@ hr {
     opacity: .80;
     font-family: 'Luminari', fantasy;
  }
+
  #column-one {
     width: 45%;
     float: left;
@@ -86,6 +90,69 @@ hr {
     margin-top: 5%;
     margin-bottom: 5%;
  }
+
+ #column-three {
+    width: 33%;
+    height: 48%;
+    float: right;
+    align-items: top;
+ }
+
+ #column-four {
+    width: 33%;
+    height: 48%;
+    float: right;
+    align-items: top;
+ }
+
+ #npc-portrait-box {
+    width: 32%;
+    float: left;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    vertical-align: bottom;
+    margin-bottom: 25%;
+    position: relative;
+ }
+
+ #new-fav-img {
+    height: 100px;
+    width: 100px;
+ }
+
+ #new-fav-txt {
+    color:white
+ }
+
+ #npc-portrait {
+    width: 200px;
+    height: 200px;
+    position:absolute;
+    /* bottom:0;
+    margin-bottom: 25%; */
+ }
+
+ .gen-box {
+    background-color: brown;
+    margin: auto;
+    border: white solid 1px;
+ }
+
+ #trait-box {
+    height: 18%;
+    width: 66%;
+    float: right;
+    align-items: top;
+ }
+
+ #desire-box {
+    height: 18%;
+    width: 100%;
+    float: right;
+    align-items: top;
+ }
+
  .container {
     position: relative;
     text-align: center;
@@ -99,11 +166,13 @@ hr {
     filter: drop-shadow(2px 2px 0 white)
     drop-shadow(-2px -2px 0 white);
  }
+
  .top {
     position: absolute;
     top: 45%;
     margin-top: 5%;
  } 
+
  .bottom {
     position: absolute;
     bottom: 45%;
@@ -116,6 +185,7 @@ hr {
     margin-right: 38%;
     opacity: 80%;
 }
+
 #credits {
     color: darkgray;
     text-align: center;
@@ -132,10 +202,14 @@ hr {
     color: white;
     background-color: #34373b;
     font-family: 'Luminari', fantasy;
+    align-items: bottom;
+    height: 10%;
 }
 
 #fav-btn {
     color: white;
     background-color: #34373b;
     font-family: 'Luminari', fantasy;
+    align-items: bottom;
+    height:9%;
 }

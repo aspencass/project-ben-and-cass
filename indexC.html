@@ -13,23 +13,47 @@
         <hr/>
         <p id="blank">&nbsp</p>
         <nav id="fav-characters">
-            <div>
+            <!-- <div>
                 <img />
-            </div>
+            </div> -->
         </nav>
         <p id="blank">&nbsp</p>
         <hr/>
         <p id="blank">&nbsp</p>
         <div id="generate-box">
-            <img id="npc-portrait" class="container" src="" alt="" style="width:150px; height:150px" >
-            <p id="npc-name"></p>
-            <p id="npc-race"></p>
-            <p id="npc-gender"></p>
-            <p id="npc-age"></p>
-            <p id="npc-trait"></p>
-            <p id="npc-desire"></p>
+            <div id="npc-portrait-box">
+                <img id="npc-portrait" src="">
+            </div>
+            <div id="column-three">
+                <div class="gen-box">
+                    <p>Name:</p>
+                    <p id="npc-name"></p>
+                </div>
+                <div class="gen-box">
+                    <p>Race:</p>
+                    <p id="npc-race"></p>
+                </div>
+            </div>
+            <div id="column-four">
+                <div class="gen-box">
+                    <p>Gender:</p>
+                    <p id="npc-gender"></p>
+                </div>
+                <div class="gen-box">
+                    <p>Age:</p>
+                    <p id="npc-age"></p>
+                </div>
+            </div>
+            <div class="gen-box" id="trait-box">
+                <p>NPC Trait:</p>
+                <p id="npc-trait"></p>
+            </div>
+            <div class="gen-box" id="desire-box">
+                <p>NPC Desire:</p>
+                <p id="npc-desire"></p>
+            </div>
             <button id="generate-btn" onclick="generateCharacter()">Generate!</button>
-            <button id="fav-btn">Favorite!</button>
+            <button id="fav-btn" onclick="favCharacter()">Favorite!</button>
         </div>
         
         <div id="dice-bar" class="row">

@@ -1,208 +1,210 @@
 {
-    "characters": [{
-        "races": {
-            "dragonborn": {
-                
-                    "male" : [
-                            "Arjhan",
-                            "Balasar",
-                            "Bharash",
-                            "Donaar",
-                            "Ghesh",
-                            "Heskan"
-                    ],
-                    "female" : [
-                            "Akra",
-                            "Biri",
-                            "Daar",
-                            "Farideh",
-                            "Harann",
-                            "Havilar"
-                    ]
-                 
-            },
-            "dwarf": {
-                    "male": [
-                        "Adrik",
-                        "Alberich",
-                        "Baern",
-                        "Barendd",
-                        "Brottor",
-                        "Bruenor"
-                    ],
-                    "female": [
-                        "Amber",
-                        "Artin",
-                        "Audhild",
-                        "Bardryn",
-                        "Dagnal",
-                        "Diesa"
-                    ]
-            },
-            "elf": {
-                    "male": [
-                        "Adran",
-                        "Aelar",
-                        "Aramil",
-                        "Arannis",
-                        "Aust",
-                        "Beiro"
-                    ],
-                    "female": [
-                        "Adrie",
-                        "Althaea",
-                        "Anastrianna",
-                        "Andraste",
-                        "Antinua",
-                        "Bethrynna"
-                    ]
-            },
-            "gnome": {
-                    "male": [
-                        "Alston",
-                        "Alvyn",
-                        "Boddynock",
-                        "Brocc",
-                        "Burgell",
-                        "Dimble"
-                    ],
-                    "female": [
-                        "Bimpnottin",
-                        "Breena",
-                        "Caramip",
-                        "Carlin",
-                        "Donella",
-                        "Duvamil"
-                    ]
-            },
-            "halfElf": {
-                    "male": [
-                        "Aseir",
-                        "Bardeid",
-                        "Haseid",
-                        "Khemed",
-                        "Mehmen",
-                        "Sudeiman"
-                    ],
-                    "female": [
-                        "Atala",
-                        "Ceidil",
-                        "Hama",
-                        "Jasmal",
-                        "Meilil",
-                        "Seipora"
-                    ]
-            },
-            "halfOrc": {
-                    "male": [
-                        "Dench",
-                        "Feng",
-                        "Gell",
-                        "Henk",
-                        "Holg",
-                        "Imsh"
-                    ],
-                    "female": [
-                        "Baggi",
-                        "Emen",
-                        "Engong",
-                        "Kansif",
-                        "Myev",
-                        "Neega"
-                    ]
-            },
-            "halfling": {
-                    "male": [
-                        "Alton",
-                        "Ander",
-                        "Cade",
-                        "Corrin",
-                        "Eldon",
-                        "Errich"
-                    ],
-                    "female": [
-                        "Andry",
-                        "Bree",
-                        "Callie",
-                        "Cora",
-                        "Euphemia",
-                        "Jillian"
-                    ]
-            },
-            "human": {
-                    "male": [
-                        "Aseir",
-                        "Bardeid",
-                        "Haseid",
-                        "Khemed",
-                        "Mehmen",
-                        "Sudeiman"
-                    ],
-                    "female": [
-                        "Atala",
-                        "Ceidil",
-                        "Hama",
-                        "Jasmal",
-                        "Meilil",
-                        "Seipora"
-                    ] 
-            },
-            "tiefling": {
-                    "male": [
-                        "Akmenos",
-                        "Amnon",
-                        "Barakas",
-                        "Damakos",
-                        "Ekemon",
-                        "Lados"
-                    ],
-                    "female": [
-                        "Aranxus",
-                        "Zhermos",
-                        "Amrius",
-                        "Valros",
-                        "Zerdos",
-                        "Casira"
-                    ]
-            }
-    }
+  "characters": [
+    {
+      "races": {
+        "dragonborn": {
+          "male": [
+            "Arjhan",
+            "Balasar",
+            "Bharash",
+            "Donaar",
+            "Ghesh",
+            "Heskan"
+          ],
+          "female": [
+            "Akra",
+            "Biri",
+            "Daar",
+            "Farideh",
+            "Harann",
+            "Havilar"
+          ]
+        },
+        "dwarf": {
+          "male": [
+            "Adrik",
+            "Alberich",
+            "Baern",
+            "Barendd",
+            "Brottor",
+            "Bruenor"
+          ],
+          "female": [
+            "Amber",
+            "Artin",
+            "Audhild",
+            "Bardryn",
+            "Dagnal",
+            "Diesa"
+          ]
+        },
+        "elf": {
+          "male": [
+            "Adran",
+            "Aelar",
+            "Aramil",
+            "Arannis",
+            "Aust",
+            "Beiro"
+          ],
+          "female": [
+            "Adrie",
+            "Althaea",
+            "Anastrianna",
+            "Andraste",
+            "Antinua",
+            "Bethrynna"
+          ]
+        },
+        "gnome": {
+          "male": [
+            "Alston",
+            "Alvyn",
+            "Boddynock",
+            "Brocc",
+            "Burgell",
+            "Dimble"
+          ],
+          "female": [
+            "Bimpnottin",
+            "Breena",
+            "Caramip",
+            "Carlin",
+            "Donella",
+            "Duvamil"
+          ]
+        },
+        "halfElf": {
+          "male": [
+            "Aseir",
+            "Bardeid",
+            "Haseid",
+            "Khemed",
+            "Mehmen",
+            "Sudeiman"
+          ],
+          "female": [
+            "Atala",
+            "Ceidil",
+            "Hama",
+            "Jasmal",
+            "Meilil",
+            "Seipora"
+          ]
+        },
+        "halfOrc": {
+          "male": [
+            "Dench",
+            "Feng",
+            "Gell",
+            "Henk",
+            "Holg",
+            "Imsh"
+          ],
+          "female": [
+            "Baggi",
+            "Emen",
+            "Engong",
+            "Kansif",
+            "Myev",
+            "Neega"
+          ]
+        },
+        "halfling": {
+          "male": [
+            "Alton",
+            "Ander",
+            "Cade",
+            "Corrin",
+            "Eldon",
+            "Errich"
+          ],
+          "female": [
+            "Andry",
+            "Bree",
+            "Callie",
+            "Cora",
+            "Euphemia",
+            "Jillian"
+          ]
+        },
+        "human": {
+          "male": [
+            "Aseir",
+            "Bardeid",
+            "Haseid",
+            "Khemed",
+            "Mehmen",
+            "Sudeiman"
+          ],
+          "female": [
+            "Atala",
+            "Ceidil",
+            "Hama",
+            "Jasmal",
+            "Meilil",
+            "Seipora"
+          ]
+        },
+        "tiefling": {
+          "male": [
+            "Akmenos",
+            "Amnon",
+            "Barakas",
+            "Damakos",
+            "Ekemon",
+            "Lados"
+          ],
+          "female": [
+            "Aranxus",
+            "Zhermos",
+            "Amrius",
+            "Valros",
+            "Zerdos",
+            "Casira"
+          ]
+        }
+      }
     },
-        [
-            "Their hair is an unusual colour for their species.",
-            "Their eyes are an unusual colour for their species.",
-            "They have lots of freckles.",
-            "They talk too much when they get nervous.",
-            "They are very clumsy.",
-            "They are incredibly germaphobic.",
-            "They are meticulous and precise in all respects.",
-            "They have absolutely no sense of humour.",
-            "They get incredibly nervous around most people.",
-            "They are blind in their left eye.",
-            "They get bored and distracted very easily.",
-            "They have a very short temper.",
-            "They are very bossy."
-        ],
-        [
-            "All they desire is a home to live in and a family to care for.",
-            "All they want is enough money to pay off their debts.",
-            "They want to prove their worth, so they can escape the shadow of their sibling.",
-            "They want to prove their worth in combat, so they plan to join an adventuring party.",
-            "They want to study magic and become a grand wizard.",
-            "They want to discover more about their ancestors.",
-            "They want to find their lost sibling.",
-            "They want to prove themself to the person they love by convincing their family they are worthy.",
-            "They want to provide for their family, but they cannot find work. Therefore, they're planning to rob a wealthy merchant.",
-            "They want to escape the bonds of their secret enslavement to a warlock/witch/demon/Shadowfell being.",
-            "They want to master a musical instrument.",
-            "They want to be taken more seriously by the guild of their profession...even if it means playing dirty.",
-            "They want to become a Cleric, so they can heal the sick.",
-            "They want to be free of their nagging spouse...whatever it takes.",
-            "They want to be free of their Warlock Patron.",
-            "They want to find true love.",
-            "They want to prove to their family that they can be strong and independent.",
-            "They want to see their sibling succeed.",
-            "They want to seek mentorship, so they can learn to control their latent Sorcerous powers.",
-            "They just want to run away from all of their responsibilities."
-        ]
+    [
+      "Their hair is an unusual colour for their species.",
+      "Their eyes are an unusual colour for their species.",
+      "They have lots of freckles.",
+      "They talk too much when they get nervous.",
+      "They are very clumsy.",
+      "They are incredibly germaphobic.",
+      "They are meticulous and precise in all respects.",
+      "They have absolutely no sense of humour.",
+      "They get incredibly nervous around most people.",
+      "They are blind in their left eye.",
+      "They get bored and distracted very easily.",
+      "They have a very short temper.",
+      "They are very bossy."
+    ],
+    [
+      "All they desire is a home to live in and a family to care for.",
+      "All they want is enough money to pay off their debts.",
+      "They want to prove their worth, so they can escape the shadow of their sibling.",
+      "They want to prove their worth in combat, so they plan to join an adventuring party.",
+      "They want to study magic and become a grand wizard.",
+      "They want to discover more about their ancestors.",
+      "They want to find their lost sibling.",
+      "They want to prove themself to the person they love by convincing their family they are worthy.",
+      "They want to provide for their family, but they cannot find work. Therefore, they're planning to rob a wealthy merchant.",
+      "They want to escape the bonds of their secret enslavement to a warlock/witch/demon/Shadowfell being.",
+      "They want to master a musical instrument.",
+      "They want to be taken more seriously by the guild of their profession...even if it means playing dirty.",
+      "They want to become a Cleric, so they can heal the sick.",
+      "They want to be free of their nagging spouse...whatever it takes.",
+      "They want to be free of their Warlock Patron.",
+      "They want to find true love.",
+      "They want to prove to their family that they can be strong and independent.",
+      "They want to see their sibling succeed.",
+      "They want to seek mentorship, so they can learn to control their latent Sorcerous powers.",
+      "They just want to run away from all of their responsibilities."
     ]
+  ],
+  "newFavs": [
+    
+  ]
 }

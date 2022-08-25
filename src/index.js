@@ -15,6 +15,9 @@ let currentCharacterRolls;
 let currentCharacterPortraitURL;
 let currentCharacterPortrait;
 let genButton;
+let newFavorite;
+let favArray = [];
+let chaNo;
 
 
 
@@ -45,13 +48,117 @@ function generateCharacter() {
 	desireGenerator();
 	rollStats();
 	assignPortrait();
-	console.log(currentCharacterRace);	
-	console.log(currentCharacterGender);
-	console.log(currentCharacterName);
-	console.log(currentCharacterAge);
-	console.log(currentCharacterTrait);
-	console.log(currentCharacterDesire);
+	// console.log(currentCharacterRace);	
+	// console.log(currentCharacterGender);
+	// console.log(currentCharacterName);
+	// console.log(currentCharacterAge);
+	// console.log(currentCharacterTrait);
+	// console.log(currentCharacterDesire);
 	showCharacters();
+
+}
+
+// Favorite Button Event Listener
+function favBtn() {
+    let favButton = document.querySelector('#fav-btn');
+    favButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        favButton.onclick = favCharacter();
+    })};
+
+//Fav character object builder
+function favCharacter() {
+	chaNo = favArray.length;
+	newFavorite = {
+		race: currentCharacterRace,
+		gender: currentCharacterGender,
+		name: currentCharacterName,
+		age: currentCharacterAge,
+		trait: currentCharacterTrait,
+		desire: currentCharacterDesire,
+		url: currentCharacterPortraitURL,
+		rolls: currentCharacterRolls,
+		id: chaNo
+	}
+	updateFavs(newFavorite);
+  }
+
+//Append fav character to Json
+function updateFavs(newFavorite){
+	favArray.push(newFavorite);
+	renderFav(newFavorite);
+  
+}
+
+// Fav render function
+function renderFav(object) {
+	let newFavoriteDiv = document.createElement('div');
+	newFavoriteDiv.setAttribute("id", "new-fav");
+	let newFavoriteDivUrl = document.createElement('img');
+	newFavoriteDivUrl.setAttribute("id", "new-fav-img");
+	let newFavoriteDivName = document.createElement('p');
+	newFavoriteDivName.setAttribute("id", "new-fav-txt");
+	let newFavoriteDivId = document.createElement('p');
+	newFavoriteDivId.setAttribute('style', 'Display:none;');
+	newFavoriteDivUrl.src = object.url;
+	newFavoriteDivName.innerText = object.name;
+	newFavoriteDivId.innerText = object.id;
+	newFavoriteDiv.append(newFavoriteDivUrl);
+	newFavoriteDiv.append(newFavoriteDivName);
+	newFavoriteDiv.append(newFavoriteDivId);
+	let favoritesBar = document.querySelector('#fav-characters');
+	favoritesBar.append(newFavoriteDiv);
+	newFavoriteDiv.addEventListener('click', (e) => {
+		e.preventDefault();
+		chaNo = newFavoriteDivId.innerText;
+		showFav(favArray[chaNo]);
+	})
+}
+
+//Show fav character function
+function showFav(character) {
+	const name = document.querySelector('#npc-name');
+    const race = document.querySelector('#npc-race');
+    const gender = document.querySelector('#npc-gender');
+    const trait = document.querySelector('#npc-trait');
+    const desire = document.querySelector('#npc-desire');
+    const age = document.querySelector('#npc-age');
+
+	name.textContent = character.name;
+	age.textContent = character.age;
+	trait.textContent = character.trait;
+	desire.textContent = character.desire;
+	if (character.gender === 'male') {
+		gender.textContent = 'Male';
+	} else if (character.gender === 'female') {
+		gender.textContent = 'Female';
+	} else {
+		console.log('You Fool!');
+	};
+	if (character.race === 'halfElf') {
+		race.textContent = 'Half-Elf';
+	} else if (character.race === 'halfOrc') {
+		race.textContent = 'Half-Orc';
+	} else {
+		race.textContent = capitalizeFirstLetter(character.race);
+	};
+
+	let portrait = document.querySelector('#npc-portrait');
+	portrait.src = character.url;
+
+	let strScr = document.querySelector('#Str-Scr');
+	let dexScr = document.querySelector('#Dex-Scr');
+	let conScr = document.querySelector('#Con-Scr');
+	let intScr = document.querySelector('#Int-Scr');
+	let winScr = document.querySelector('#Wis-Scr');
+	let chaScr = document.querySelector('#Cha-Scr');
+
+	strScr.textContent = character.rolls[0];
+	dexScr.textContent = character.rolls[1];
+	conScr.textContent = character.rolls[2];
+	intScr.textContent = character.rolls[3];
+	winScr.textContent = character.rolls[4];
+	chaScr.textContent = character.rolls[5];	
 
 }
 
