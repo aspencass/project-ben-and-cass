@@ -5,6 +5,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(3px);
+    font-family: cursive;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 #top {
@@ -36,10 +39,20 @@ hr {
 
 #fav-characters {
     background-color: #34373b;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin: auto;
     border: 1px white solid;
     opacity: .80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 1326px;
+    flex-wrap: wrap;
+    font-size: 20;
+}
+#new-fav {
+  background-color: #212326;
+  border: 1px white solid;
 }
 
 #generate-box {
@@ -93,20 +106,20 @@ hr {
 
  #column-three {
     width: 33%;
-    height: 48%;
+    height: 50%;
     float: right;
     align-items: top;
  }
 
  #column-four {
     width: 33%;
-    height: 48%;
+    height: 50%;
     float: right;
     align-items: top;
  }
 
  #npc-portrait-box {
-    width: 32%;
+    width: 33%;
     float: left;
     height: 15%;
     display: flex;
@@ -114,6 +127,7 @@ hr {
     vertical-align: bottom;
     margin-bottom: 25%;
     position: relative;
+    margin-top: 5%;
  }
 
  #new-fav-img {
@@ -131,24 +145,32 @@ hr {
     position:absolute;
     /* bottom:0;
     margin-bottom: 25%; */
+    z-index: -1;
  }
 
  .gen-box {
-    background-color: brown;
+    background-color: #542e23;
     margin: auto;
     border: white solid 1px;
+    height: 50%;
+    color: white;
+ }
+
+ #frame {
+    width: 200px;
+    height: 200px;
  }
 
  #trait-box {
-    height: 18%;
-    width: 66%;
+    height: 24.6%;
+    width: 65.8%;
     float: right;
     align-items: top;
  }
 
  #desire-box {
-    height: 18%;
-    width: 100%;
+    height: 24.6%;
+    width: 65.8%;
     float: right;
     align-items: top;
  }
@@ -204,6 +226,20 @@ hr {
     font-family: 'Luminari', fantasy;
     align-items: bottom;
     height: 10%;
+    float: left;
+    margin-left:6%;
+    margin-bottom: 20%;
+}
+
+.info {
+    background-color: #33170f;
+    font-family: 'Luminari', fantasy;
+    font-size: 22px;
+    color: black;
+    -webkit-text-stroke: .01px white;
+    border: .5px solid white;
+    height:25%;
+
 }
 
 #fav-btn {
@@ -211,5 +247,8 @@ hr {
     background-color: #34373b;
     font-family: 'Luminari', fantasy;
     align-items: bottom;
-    height:9%;
+    height:10%;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 20%;
 }
